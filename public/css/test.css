@@ -1,0 +1,17 @@
+/*table {*/
+    /*width: 2000px;*/
+/*}*/
+
+table {
+    display: block;
+    overflow: auto;
+    max-width: 100%;
+}
+
+/*td {*/
+    /*border: solid 1px;*/
+/*}*/
+
+/*.container {*/
+    /*overflow: scroll;*/
+/*}*/
