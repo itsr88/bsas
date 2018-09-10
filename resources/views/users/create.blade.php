@@ -61,19 +61,16 @@
                                 </div>
                             </div>
 
+
                             <div class="form-group">
-                                <label for="password-confirm" class="col-md-4 control-label"></label>
+                                <label class="col-md-4 control-label">Роль</label>
 
                                 <div class="col-md-6">
-
-
-                                    <div class="checkbox">
-                                        <label>
-                                            <input id="is_admin" type="checkbox" name="is_admin" value="1"> Администратор
-                                        </label>
-                                    </div>
-
-
+                                    @foreach($roles as $role)
+                                        <input type="checkbox" name="roles[]" value="{{$role->id}}">
+                                        <label class="">{{ucfirst($role->name)}}</label>
+                                        <br>
+                                    @endforeach
                                 </div>
                             </div>
 

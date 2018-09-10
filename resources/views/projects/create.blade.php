@@ -26,15 +26,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="contractor" class="col-md-4 control-label">Подрядчик</label>
+                                <label for="podriadchik" class="col-md-4 control-label">Подрядчик</label>
                                 <div class="col-md-8">
-                                    <input id="contractor" type="text" class="form-control" name="contractor" value="">
+                                    <input id="podriadchik" type="text" class="form-control" name="podriadchik" value="">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="du_name" class="col-md-4 control-label">DU Name</label>
+                                <label for="du_name_v_zakaze" class="col-md-4 control-label">DU Name</label>
                                 <div class="col-md-8">
-                                    <input id="du_name" type="text" class="form-control" name="du_name" value="">
+                                    <input id="du_name_v_zakaze" type="text" class="form-control" name="du_name_v_zakaze" value="">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -50,9 +50,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="priority" class="col-md-4 control-label">Приоритет</label>
+                                <label for="prioritet" class="col-md-4 control-label">Приоритет</label>
                                 <div class="col-md-8">
-                                    <input id="priority" type="text" class="form-control" name="priority" value="">
+                                    <input id="prioritet" type="text" class="form-control" name="prioritet" value="">
                                 </div>
                             </div>
                         </div>

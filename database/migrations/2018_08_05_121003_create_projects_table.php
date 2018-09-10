@@ -15,33 +15,78 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
+
             $table->integer('du_id')->nullable();
-            $table->string('contractor')->nullable();
-            $table->string('du_name')->nullable();
-            $table->string('address_to_id')->nullable();
-            $table->string('address_registered_in_sez_on_P1')->nullable();
+            $table->string('podriadchik')->nullable();
+            $table->string('du_name_v_zakaze')->nullable();
+            $table->string('adres_v_id')->nullable();
+            $table->string('adres_propisannyi_v_SEZ_na_R1')->nullable();
             $table->string('city')->nullable();
             $table->string('year')->nullable();
-            $table->string('priority')->nullable();
-            $table->string('BS_in_the_air')->nullable();
-            $table->string('order_R1_number')->nullable();
-            $table->date('order_R1_date_of_the_beginning')->nullable();
-            $table->date('order_R1_end_date')->nullable();
-            $table->text('order_R1_comment')->nullable();
-            $table->date('ID_OTR_received_date')->nullable();
-            $table->text('ID_OTR_received_comment')->nullable();
-            $table->date('photos_received_date')->nullable();
-            $table->text('photos_received_comment')->nullable();
-            $table->text('lease_contract_comment')->nullable();
-            $table->date('SO_data_request_date')->nullable();
-            $table->string('SO_data_responsibility')->nullable();
-            $table->string('SO_data_received')->nullable();
-            $table->string('PSEZ_complite_questions_for_developing_PSEZ')->nullable();
-            $table->date('PSEZ_complite_planned date')->nullable();
-            $table->date('PSEZ_complite_actual_date')->nullable();
-            $table->string('PSEZ_complite_comments')->nullable();
+            $table->string('prioritet')->nullable();
+            $table->string('bs_v_efire')->nullable();
+            $table->string('zakaz_R1_num')->nullable();
+            $table->date('zakaz_R1_data_nachala')->nullable();
+            $table->date('zakaz_R1_data_okonchaniia_zakaza')->nullable();
+            $table->text('zakaz_R1_data_kommentarii')->nullable();
+            $table->date('ID_OTR_polucheny_data')->nullable();
+            $table->text('ID_OTR_polucheny_data_kommentarii')->nullable();
+            $table->date('fotootchet_poluchen_data')->nullable();
+            $table->text('fotootchet_poluchen_data_kommentarii')->nullable();
+            $table->text('dogovor_arendy_poluchen_kommentarii')->nullable();
+            $table->date('dannye_SO_data_zaprosa')->nullable();
+            $table->string('dannye_SO_otvetstvennost')->nullable();
+            $table->string('dannye_SO_polucheny')->nullable();
+            $table->text('PSEZ_gotov_voprosy_voznikaiushchie_pri_razrabotke_PSEZ')->nullable();
+            $table->date('PSEZ_gotov_planovaia_data')->nullable();
+            $table->date('PSEZ_gotov_fakticheskaia_data')->nullable();
+            $table->text('PSEZ_gotov_data_kommentarii')->nullable();
+            $table->string('PSEZ_gotov_proektirovshchik')->nullable();
+            $table->date('PSEZ_peredan_v_OI_planovaia_data')->nullable();
+            $table->date('PSEZ_peredan_v_OI_fakticheskaia_data')->nullable();
+            $table->text('PSEZ_peredan_v_OI_data_kommentarii')->nullable();
+            $table->date('ekspertnoe_zacliuchenie_polucheno_planovaia_data')->nullable();
+            $table->date('ekspertnoe_zacliuchenie_polucheno_fakticheskaia_data')->nullable();
+            $table->text('ekspertnoe_zacliuchenie_polucheno_data_kommentarii')->nullable();
+            $table->date('ekspertnoe_zacliuchenie_peredano_v_RPN_planovaia_data')->nullable();
+            $table->date('ekspertnoe_zacliuchenie_peredano_v_RPN_fakticheskaia_data')->nullable();
+            $table->text('ekspertnoe_zacliuchenie_peredano_v_RPN_data_kommentarii')->nullable();
+            $table->date('R1_gotov_planovaia_data')->nullable();
+            $table->date('R1_gotov_fakticheskaia_data')->nullable();
+            $table->text('R1_gotov_data_kommentarii')->nullable();
+            $table->date('akt_priemki_SP_E1_R1_data')->nullable();
+            $table->text('akt_priemki_SP_E1_R1_data_kommentarii')->nullable();
+            $table->string('oplata_SP_E1_R1_obshchaia_summa_zakaza_NDS')->nullable();
+            $table->string('oplata_SP_E1_R1_avans')->nullable();
+            $table->text('oplata_SP_E1_R1_data_kommentarii')->nullable();
+            $table->string('oplata_SP_E1_R1_post_oplata')->nullable();
+            $table->text('post_oplata_SP_E1_R1_data_kommentarii')->nullable();
+            $table->string('zakaz_Р2_num')->nullable();
+            $table->date('zakaz_R2_data_nachala')->nullable();
+            $table->date('zakaz_R2_data_okonchaniia_zakaza')->nullable();
+            $table->text('zakaz_R2_data_kommentarii')->nullable();
+            $table->date('zamery_EMI_planovaia_data')->nullable();
+            $table->date('zamery_EMI_fakticheskaia_data')->nullable();
+            $table->text('zamery_EMI_kommentarii')->nullable();
+            $table->date('oformlenie_protokola_planovaia_data')->nullable();
+            $table->date('oformlenie_protokola_fakticheskaia_data')->nullable();
+            $table->text('oformlenie_protokola_kommentarii')->nullable();
+            $table->date('ekspertiza_otpravlena_v_RPN_planovaia_data')->nullable();
+            $table->date('ekspertiza_otpravlena_v_RPN_fakticheskaia_data')->nullable();
+            $table->text('ekspertiza_otpravlena_v_RPN__data_kommentarii')->nullable();
+            $table->date('R2_gotov_planovaia_data')->nullable();
+            $table->date('R2_gotov_fakticheskaia_data')->nullable();
+            $table->text('R2_gotov_data_kommentarii')->nullable();
+            $table->date('akt_priemki_E2_R2_data')->nullable();
+            $table->text('akt_priemki_E2_R2_data_kommentarii')->nullable();
+            $table->string('oplata_Е2_R2_obshchaia_summa_zakaza_NDS')->nullable();
+            $table->string('oplata_Е2_R2_avans')->nullable();
+            $table->text('oplata_Е2_R2_data_kommentarii')->nullable();
+            $table->string('oplata_Е2_R2_post_oplata')->nullable();
+            $table->text('post_oplata_Е2_R2_data_kommentarii')->nullable();
 
-            $table->integer('user_id')->unsigned()->default(1);
+
+            $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
@@ -55,5 +100,6 @@ class CreateProjectsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('projects');
+        Schema::dropIfExists('roles');
     }
 }

@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin == 1)
+        if ( Auth::user()->roles->first()->id == '1')
             return redirect('/admin');
         else
             return redirect('/project');

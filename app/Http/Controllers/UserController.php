@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -25,7 +26,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+
+        return view('users.create', [
+            'user' => [],
+            'roles' => Role::get(),
+        ]);
     }
 
     /**
@@ -36,13 +41,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-            User::create([
+        $user = User::create([
                 'name' => $request['name'],
                 'email' => $request['email'],
-                'is_admin' => $request['is_admin'],
                 'password' => bcrypt($request['password']),
             ]);
-            return redirect('home');
+
+        if ($request->input('roles')):
+            $user->roles()->attach($request->input('roles'));
+        else:
+            $user->roles()->attach('4');
+        endif;
+
+        return redirect('/');
     }
 
     /**
@@ -85,8 +96,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->roles()->detach();
+        $user->delete();
+
+        return redirect('/');
     }
 }

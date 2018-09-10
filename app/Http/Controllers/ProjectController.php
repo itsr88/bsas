@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,13 +18,23 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->is_admin == 1)
+        $user = Auth::user()->roles->first()->id;
+
+        if ( $user == '1')
             return view('projects.index', [
                'projects' => Project::all()
             ]);
-        else
-            return view('projects.index', [
+        elseif ($user == '2')
+            return view('projects.planner.index', [
                 'projects' => Project::all()->where('user_id', Auth::user()->id)
+            ]);
+        elseif ($user == '3')
+            return view('projects.bookkeeper.index', [
+                'projects' => Project::all()
+            ]);
+        else
+            return view('projects.auditor.index', [
+                'projects' => Project::all()
             ]);
     }
 
@@ -48,11 +59,12 @@ class ProjectController extends Controller
         Project::create([
             'user_id' => Auth::user()->id,
             'du_id' => $request['du_id'],
-            'contractor' => $request['contractor'],
-            'du_name' => $request['du_name'],
+            'podriadchik' => $request['podriadchik'],
+            'du_name_v_zakaze' => $request['du_name_v_zakaze'],
             'city' => $request['city'],
             'year' => $request['year'],
-            'priority' => $request['priority'],
+            'prioritet' => $request['prioritet'],
+            'PSEZ_gotov_proektirovshchik' => Auth::user()->name,
         ]);
         return redirect('project');
     }
@@ -74,9 +86,9 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        //
+        return view('projects.edit', compact('project'));
     }
 
     /**
@@ -86,9 +98,11 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Project $project)
     {
-        //
+        $project->update($request->all());
+
+        return redirect('project');
     }
 
     /**

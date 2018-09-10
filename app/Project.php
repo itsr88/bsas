@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = [
-        'user_id', 'du_id', 'contractor', 'du_name', 'city', 'year', 'priority',
-    ];
+    protected $guarded = [];
+
 
     public function User()
     {
