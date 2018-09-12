@@ -38,6 +38,18 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="adres_v_id" class="col-md-4 control-label">Адрес в ИД</label>
+                                <div class="col-md-8">
+                                    <input id="du_name_v_zakaze" type="text" class="form-control" name="adres_v_id" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="adres_propisannyi_v_SEZ_na_R1" class="col-md-4 control-label">Адрес в СЭЗ на Р1</label>
+                                <div class="col-md-8">
+                                    <input id="du_name_v_zakaze" type="text" class="form-control" name="adres_propisannyi_v_SEZ_na_R1" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="city" class="col-md-4 control-label">City</label>
                                 <div class="col-md-8">
                                     <input id="city" type="text" class="form-control" name="city" value="">

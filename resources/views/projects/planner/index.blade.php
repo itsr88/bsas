@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>Проектировщик</div>
-
     <div class="row">
 
         <div class="col-md-12">
@@ -53,9 +51,9 @@
                             <th>Ответственность</th>
                             <th>Данные СО получены</th>
                             <th>Вопросы возникающие при разработке ПСЭЗ</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th>Плановая дата</th>
+                            <th>Фактическая дата</th>
+                            <th>Дата + комментарии</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -87,53 +85,6 @@
                                 <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
                                 <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
                                 <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_proektirovshchik}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_peredan_v_OI_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_peredan_v_OI_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_peredan_v_OI_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertnoe_zacliuchenie_polucheno_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertnoe_zacliuchenie_polucheno_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertnoe_zacliuchenie_polucheno_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertnoe_zacliuchenie_peredano_v_RPN_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertnoe_zacliuchenie_peredano_v_RPN_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertnoe_zacliuchenie_peredano_v_RPN_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->R1_gotov_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->R1_gotov_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->R1_gotov_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->akt_priemki_SP_E1_R1_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->akt_priemki_SP_E1_R1_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_SP_E1_R1_obshchaia_summa_zakaza_NDS}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_SP_E1_R1_avans}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_SP_E1_R1_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_SP_E1_R1_post_oplata}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->post_oplata_SP_E1_R1_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_Р2_№}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_R2_data_nachala}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_R2_data_okonchaniia_zakaza}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_R2_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zamery_EMI_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zamery_EMI_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zamery_EMI_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oformlenie_protokola_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oformlenie_protokola_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oformlenie_protokola_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertiza_otpravlena_v_RPN_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertiza_otpravlena_v_RPN_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ekspertiza_otpravlena_v_RPN__data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->R2_gotov_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->R2_gotov_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->R2_gotov_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->akt_priemki_E2_R2_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->akt_priemki_E2_R2_дата_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_Е2_R2_obshchaia_summa_zakaza_NDS}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_Е2_R2_avans}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_Е2_R2_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->oplata_Е2_R2_post_oplata}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->post_oplata_Е2_R2_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-
-
-
-
                             </tr>
                         @endforeach
 

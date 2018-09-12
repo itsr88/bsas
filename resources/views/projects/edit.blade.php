@@ -12,7 +12,7 @@
 
 
         <div class="row">
-            <form class="form-horizontal" method="POST" action="{{route('project.update', ['project' => $project->id ])}}">
+            <form class="form-horizontal" method="POST" action="{{route('project.update', ['project' => $project->id])}}">
                 {{ csrf_field() }}
                 {!! method_field('patch') !!}
 

@@ -7,7 +7,6 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Система учёта базовых станций') }}</title>
 
     <!-- Styles -->
@@ -77,56 +76,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-
-
-    <script>
-
-        $('.wrap').on('click', '.edit', function() {
-            $this = $(this);
-            $this.find('div').hide();
-            $input = $this.find('input').show().focus();
-        });
-        $('.wrap').on('focusout', '.edit input', function() {
-            var $input = $(this).hide();
-            var $tr = $input.closest('tr');
-            var $td = $input.parent();
-            var defaultValue = $input[0].defaultValue;
-            var newValue = $input.val();
-            var $div = $tr.find('div').text($input.val()).show();
-
-
-            // if(defaultValue === newValue) {
-            //     return false;
-            // }
-            // function fail(){
-            //     $div.text(defaultValue);
-            //     $input.val(defaultValue);
-            //     alert('не удалось изменить элемент');
-            // }
-
-            {{--$.ajax({--}}
-                {{--method: 'POST',--}}
-                {{--url: '{{route('ajaxupdate')}}',--}}
-                {{--data: {--}}
-                    {{--'id' : $tr.data('id'),--}}
-                    {{--'name' : $td.data('name')--}}
-                {{--}--}}
-            {{--})--}}
-            $.post('{{route('ajaxupdate')}}', {
-                id: $tr.data('id'),
-                name: $td.data('name'),
-                value: newValue,
-                html: 'ok'
-            }).done(function(data){
-                if(data==='ok'){
-                    $input[0].defaultValue = newValue;
-                } else {
-                    fail()
-                }
-            }).fail(fail)
-        })
-
-
-    </script>
+    <script src="{{ asset('js/ajaxupdatefield.js') }}"> </script>
 </body>
 </html>
