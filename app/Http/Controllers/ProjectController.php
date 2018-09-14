@@ -58,12 +58,26 @@ class ProjectController extends Controller
     {
         Project::create([
             'user_id' => Auth::user()->id,
-            'du_id' => $request['du_id'],
-            'podriadchik' => $request['podriadchik'],
-            'du_name_v_zakaze' => $request['du_name_v_zakaze'],
-            'city' => $request['city'],
-            'year' => $request['year'],
-            'prioritet' => $request['prioritet'],
+            'du_id' => $request->du_id,
+            'podriadchik' => $request->podriadchik,
+            'du_name_v_zakaze' => $request->du_name_v_zakaze,
+            'city' => $request->city,
+            'year' => $request->year,
+            'prioritet' => $request->prioritet,
+            'adres_v_id' => $request->adres_v_id,
+            'adres_propisannyi_v_SEZ_na_R1' => $request->adres_propisannyi_v_SEZ_na_R1,
+            'PSEZ_gotov_planovaia_data' => $request->PSEZ_gotov_planovaia_data,
+            'PSEZ_gotov_fakticheskaia_data' => $request->PSEZ_gotov_fakticheskaia_data,
+            'PSEZ_gotov_data_kommentarii' => $request->PSEZ_gotov_data_kommentarii,
+            'PSEZ_peredan_v_OI_planovaia_data' => $request->PSEZ_peredan_v_OI_planovaia_data,
+            'PSEZ_peredan_v_OI_fakticheskaia_data' => $request->PSEZ_peredan_v_OI_fakticheskaia_data,
+            'PSEZ_peredan_v_OI_data_kommentarii' => $request->PSEZ_peredan_v_OI_data_kommentarii,
+            'ekspertnoe_zacliuchenie_polucheno_planovaia_data' => $request->ekspertnoe_zacliuchenie_polucheno_planovaia_data,
+            'ekspertnoe_zacliuchenie_polucheno_fakticheskaia_data' => $request->ekspertnoe_zacliuchenie_polucheno_fakticheskaia_data,
+            'ekspertnoe_zacliuchenie_polucheno_data_kommentarii' => $request->ekspertnoe_zacliuchenie_polucheno_data_kommentarii,
+            'ekspertnoe_zacliuchenie_peredano_v_RPN_planovaia_data' => $request->ekspertnoe_zacliuchenie_peredano_v_RPN_planovaia_data,
+            'ekspertnoe_zacliuchenie_peredano_v_RPN_fakticheskaia_data' => $request->ekspertnoe_zacliuchenie_peredano_v_RPN_fakticheskaia_data,
+            'ekspertnoe_zacliuchenie_peredano_v_RPN_data_kommentarii' => $request->ekspertnoe_zacliuchenie_peredano_v_RPN_data_kommentarii,
             'PSEZ_gotov_proektirovshchik' => Auth::user()->name,
         ]);
         return redirect('project');
@@ -120,9 +134,6 @@ class ProjectController extends Controller
         $project->update([
             $field_name => $value,
         ]);
-
-
-
     }
 
     /**

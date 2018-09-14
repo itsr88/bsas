@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
     <div class="row">
 
         <div class="col-md-12">
@@ -15,11 +17,10 @@
         <div class="col-md-12">
             <div class="container-fluid">
                 <div class="panel panel-default">
-                    <table class="table table-bordered table-hover wrap">
+                    <table id="projects" class="wrap table table-bordered table-hover">
                         <thead>
 
                         <tr>
-                            <th rowspan="2">#</th>
                             <th rowspan="2">DU ID</th>
                             <th rowspan="2">ПОДРЯДЧИК</th>
                             <th rowspan="2">DU Name (в ЗАКАЗЕ)</th>
@@ -58,33 +59,32 @@
                         </thead>
                         <tbody>
                         @foreach ($projects as $project)
-                            <tr data-id="{{$project->id}}">
-                                <td data-name="contractor" class="edit"><div>{{$project->id}}</div><input value="{{$project->id}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->du_id}}</div><input value="{{$project->du_id}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->podriadchik}}</div><input value="{{$project->podriadchik}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->du_name_v_zakaze}}</div><input value="{{$project->du_name_v_zakaze}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->adres_v_id}}</div><input value="{{$project->adres_v_id}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->adres_propisannyi_v_SEZ_na_R1}}</div><input value="{{$project->adres_propisannyi_v_SEZ_na_R1}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->city}}</div><input value="{{$project->city}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->year}}</div><input value="{{$project->year}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->prioritet}}</div><input value="{{$project->Column8}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->bs_v_efire}}</div><input value="{{$project->Column9}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_R1_№}}</div><input value="{{$project->Column10}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_R1_data_nachala}}</div><input value="{{$project->Column11}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_R1_data_okonchaniia_zakaza}}</div><input value="{{$project->Column12}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->zakaz_R1_data_kommentarii}}</div><input value="{{$project->Column13}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ID_OTR_polucheny_data}}</div><input value="{{$project->Column14}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->ID_OTR_polucheny_data_kommentarii}}</div><input value="{{$project->Column15}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->fotootchet_poluchen_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->fotootchet_poluchen_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->dogovor_arendy_poluchen_kommentarii}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->dannye_SO_data_zaprosa}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->dannye_SO_otvetstvennost}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->dannye_SO_polucheny}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_voprosy_voznikaiushchie_pri_razrabotke_PSEZ}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_planovaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_fakticheskaia_data}}</div><input value="{{$project->Column16}}"></td>
-                                <td data-name="contractor" class="edit"><div>{{$project->PSEZ_gotov_data_kommentarii}}</div><input value="{{$project->Column16}}"></td>
+                            <tr id="{{$project->id}}">
+                                <td data-name="du_id" class=" du_id">{{$project->du_id}}</td>
+                                <td data-name="podriadchik" class=" podriadchik">{{$project->podriadchik}}</td>
+                                <td data-name="du_name_v_zakaze" class=" du_name_v_zakaze">{{$project->du_name_v_zakaze}}</td>
+                                <td data-name="adres_v_id" class=" adres_v_id">{{$project->adres_v_id}}</td>
+                                <td data-name="adres_propisannyi_v_SEZ_na_R1" class=" adres_propisannyi_v_SEZ_na_R1">{{$project->adres_propisannyi_v_SEZ_na_R1}}</td>
+                                <td data-name="city" class=" city">{{$project->city}}</td>
+                                <td data-name="year" class=" year"><div>{{$project->year}}</div></td>
+                                <td data-name="prioritet" class=" prioritet"><div>{{$project->prioritet}}</div></td>
+                                <td data-name="bs_v_efire" class=" bs_v_efire"><div>{{$project->bs_v_efire}}</div></td>
+                                <td data-name="zakaz_R1_num" class=" bs_v_efire"><div>{{$project->zakaz_R1_num}}</div></td>
+                                <td data-name="zakaz_R1_data_nachala" class=" bs_v_efire"><div>{{$project->zakaz_R1_data_nachala}}</div></td>
+                                <td data-name="zakaz_R1_data_okonchaniia_zakaza" class=""><div>{{$project->zakaz_R1_data_okonchaniia_zakaza}}</div></td>
+                                <td data-name="zakaz_R1_data_kommentarii" class="">{{$project->zakaz_R1_data_kommentarii}}</td>
+                                <td data-name="ID_OTR_polucheny_data" class="edit"><div>{{$project->ID_OTR_polucheny_data}}</div></td>
+                                <td data-name="ID_OTR_polucheny_data_kommentarii" class="edit"><div>{{$project->ID_OTR_polucheny_data_kommentarii}}</div></td>
+                                <td data-name="fotootchet_poluchen_data" class="edit"><div>{{$project->fotootchet_poluchen_data}}</div></td>
+                                <td data-name="fotootchet_poluchen_data_kommentarii" class="edit"><div>{{$project->fotootchet_poluchen_data_kommentarii}}</div></td>
+                                <td data-name="dogovor_arendy_poluchen_kommentarii" class="edit"><div>{{$project->dogovor_arendy_poluchen_kommentarii}}</div></td>
+                                <td data-name="dannye_SO_data_zaprosa" class="edit"><div>{{$project->dannye_SO_data_zaprosa}}</div></td>
+                                <td data-name="dannye_SO_otvetstvennost" class="edit"><div>{{$project->dannye_SO_otvetstvennost}}</div></td>
+                                <td data-name="dannye_SO_polucheny" class="edit"><div>{{$project->dannye_SO_polucheny}}</div></td>
+                                <td data-name="PSEZ_gotov_voprosy_voznikaiushchie_pri_razrabotke_PSEZ" class="edit"><div>{{$project->PSEZ_gotov_voprosy_voznikaiushchie_pri_razrabotke_PSEZ}}</div></td>
+                                <td data-name="PSEZ_gotov_planovaia_data" class="edit"><div>{{$project->PSEZ_gotov_planovaia_data}}</div></td>
+                                <td data-name="PSEZ_gotov_fakticheskaia_data" class="edit"><div>{{$project->PSEZ_gotov_fakticheskaia_data}}</div></td>
+                                <td data-name="PSEZ_gotov_data_kommentarii" class="edit"><div>{{$project->PSEZ_gotov_data_kommentarii}}</div></td>
                             </tr>
                         @endforeach
 

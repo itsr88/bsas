@@ -131,12 +131,12 @@
                 <td data-name="du_name_v_zakaze" class="edit du_name_v_zakaze">{{$project->du_name_v_zakaze}}</td>
                 <td data-name="adres_v_id" class="edit adres_v_id">{{$project->adres_v_id}}</td>
                 <td data-name="adres_propisannyi_v_SEZ_na_R1" class="edit adres_propisannyi_v_SEZ_na_R1">{{$project->adres_propisannyi_v_SEZ_na_R1}}</td>
-                <td data-name="city" class="edit city"><div>{{$project->city}}</div></td>
+                <td data-name="city" class="edit city">{{$project->city}}</td>
                 <td data-name="year" class="edit year"><div>{{$project->year}}</div></td>
                 <td data-name="prioritet" class="edit prioritet"><div>{{$project->prioritet}}</div></td>
-                <td data-name="bs_v_efire" class="edit"><div>{{$project->bs_v_efire}}</div></td>
-                <td data-name="zakaz_R1_num" class="edit"><div>{{$project->zakaz_R1_num}}</div></td>
-                <td data-name="zakaz_R1_data_nachala" class="edit"><div>{{$project->zakaz_R1_data_nachala}}</div></td>
+                <td data-name="bs_v_efire" class="edit bs_v_efire"><div>{{$project->bs_v_efire}}</div></td>
+                <td data-name="zakaz_R1_num" class="edit bs_v_efire"><div>{{$project->zakaz_R1_num}}</div></td>
+                <td data-name="zakaz_R1_data_nachala" class="edit bs_v_efire"><div>{{$project->zakaz_R1_data_nachala}}</div></td>
                 <td data-name="zakaz_R1_data_okonchaniia_zakaza" class="edit"><div>{{$project->zakaz_R1_data_okonchaniia_zakaza}}</div></td>
                 <td data-name="zakaz_R1_data_kommentarii" class="edit">{{$project->zakaz_R1_data_kommentarii}}</td>
                 <td data-name="ID_OTR_polucheny_data" class="edit"><div>{{$project->ID_OTR_polucheny_data}}</div></td>

@@ -22,7 +22,7 @@
                             <div class="form-group">
                                 <label for="du_id" class="col-md-4 control-label">DU ID</label>
                                 <div class="col-md-8">
-                                    <input id="du_id" type="text" class="form-control" name="du_id" value="">
+                                    <input id="du_id" type="number" class="form-control" name="du_id" value="">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -40,13 +40,13 @@
                             <div class="form-group">
                                 <label for="adres_v_id" class="col-md-4 control-label">Адрес в ИД</label>
                                 <div class="col-md-8">
-                                    <input id="du_name_v_zakaze" type="text" class="form-control" name="adres_v_id" value="">
+                                    <input id="adres_v_id" type="text" class="form-control" name="adres_v_id" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="adres_propisannyi_v_SEZ_na_R1" class="col-md-4 control-label">Адрес в СЭЗ на Р1</label>
                                 <div class="col-md-8">
-                                    <input id="du_name_v_zakaze" type="text" class="form-control" name="adres_propisannyi_v_SEZ_na_R1" value="">
+                                    <input id="adres_propisannyi_v_SEZ_na_R1" type="text" class="form-control" name="adres_propisannyi_v_SEZ_na_R1" value="">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -82,19 +82,19 @@
                             <div class="form-group">
                                 <label for="PSEZ_complite_planned date" class="col-md-4 control-label">Плановая дата</label>
                                 <div class="col-md-8">
-                                    <input id="PSEZ_complite_planned date" type="date" class="form-control" name="PSEZ_complite_planned date" value="">
+                                    <input id="PSEZ_complite_planned date" type="date" class="form-control" name="PSEZ_gotov_planovaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="PSEZ_complite_actual_date" class="col-md-4 control-label">Фактическая дата</label>
                                 <div class="col-md-8">
-                                    <input id="PSEZ_complite_actual_date" type="date" class="form-control" name="PSEZ_complite_actual_date" value="">
+                                    <input id="PSEZ_complite_actual_date" type="date" class="form-control" name="PSEZ_gotov_fakticheskaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="PSEZ_complite_comments" class="col-md-4 control-label">Комментарии</label>
                                 <div class="col-md-8">
-                                    <input id="PSEZ_complite_comments" type="text" class="form-control" name="PSEZ_complite_comments" value="">
+                                    <input id="PSEZ_complite_comments" type="text" class="form-control" name="PSEZ_gotov_data_kommentarii" value="">
                                 </div>
                             </div>
                         </div>
@@ -107,19 +107,19 @@
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Плановая дата</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="date" class="form-control" name="name" value="">
+                                    <input id="name" type="date" class="form-control" name="PSEZ_peredan_v_OI_planovaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Фактическая дата</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="date" class="form-control" name="name" value="">
+                                    <input id="name" type="date" class="form-control" name="PSEZ_peredan_v_OI_fakticheskaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Комментарии</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="text" class="form-control" name="name" value="">
+                                    <input id="name" type="text" class="form-control" name="PSEZ_peredan_v_OI_data_kommentarii" value="">
                                 </div>
                             </div>
                         </div>
@@ -137,19 +137,19 @@
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Плановая дата</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="date" class="form-control" name="name" value="">
+                                    <input id="name" type="date" class="form-control" name="ekspertnoe_zacliuchenie_polucheno_planovaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Фактическая дата</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="date" class="form-control" name="name" value="">
+                                    <input id="name" type="date" class="form-control" name="ekspertnoe_zacliuchenie_polucheno_fakticheskaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Комментарии</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="text" class="form-control" name="name" value="">
+                                    <input id="name" type="text" class="form-control" name="ekspertnoe_zacliuchenie_polucheno_data_kommentarii" value="">
                                 </div>
                             </div>
                         </div>
@@ -162,19 +162,19 @@
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Плановая дата</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="date" class="form-control" name="name" value="">
+                                    <input id="name" type="date" class="form-control" name="ekspertnoe_zacliuchenie_peredano_v_RPN_planovaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Фактическая дата</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="date" class="form-control" name="name" value="">
+                                    <input id="name" type="date" class="form-control" name="ekspertnoe_zacliuchenie_peredano_v_RPN_fakticheskaia_data" value="">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-md-4 control-label">Комментарии</label>
                                 <div class="col-md-8">
-                                    <input id="name" type="text" class="form-control" name="name" value="">
+                                    <input id="name" type="text" class="form-control" name="ekspertnoe_zacliuchenie_peredano_v_RPN_data_kommentarii" value="">
                                 </div>
                             </div>
                         </div>
