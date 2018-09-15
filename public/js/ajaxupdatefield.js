@@ -1,6 +1,14 @@
+
+
+
+
+
+
+
+
 $(function()	{
     //при нажатии на ячейку таблицы с классом edit
-    $('.edit').click(function(){
+    $('.edit').dblclick(function(){
 //находим input внутри элемента с классом ajax и вставляем вместо input его значение
         $('.ajax').html($('.ajax input').val());
 //удаляем все классы ajax
@@ -27,7 +35,6 @@ $('.edit').on('focusout', function(){
 
 
 
-
     // $('#editbox').live('blur',function(){
     //     $('.ajax').html($('.ajax input').val());
     //     $('.ajax').removeClass('ajax');
@@ -43,7 +50,7 @@ $('.edit').on('focusout', function(){
 
     $.ajax({
         type: "POST",
-        url: "/project/ajaxupdate/",
+        url: "/project/ajaxupdate",
         dataType: 'json',
         data: {
             'project_id' : project_id,
@@ -51,12 +58,13 @@ $('.edit').on('focusout', function(){
             'value' : value,
         },
         //при удачном выполнении скрипта, производим действия
-        success: function(){
-            alert('Привет');
-            //находим input внутри элемента с классом ajax и вставляем вместо input его значение
-            $('.ajax').html($('.ajax input').val());
-            //удаялем класс ajax
-            $('.ajax').removeClass('ajax');
-        }});
+        // success: function(){
+        //     alert('Привет');
+        //     //находим input внутри элемента с классом ajax и вставляем вместо input его значение
+        //     $('.ajax').html($('.ajax input').val());
+        //     //удаялем класс ajax
+        //     $('.ajax').removeClass('ajax');
+        // }});
+});
 });
 

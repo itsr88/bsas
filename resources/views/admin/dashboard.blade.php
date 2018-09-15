@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <a class="btn btn-block btn-default" href="{{ route('user.create') }}">Создать пользователя</a>
                 <div class="panel panel-default">
-                <table class="footable table table-striped toggle-arrow-tiny">
+                <table class="table table-striped">
                     <thead>
                     <tr>
                         <th data-toggle="true">Список пользователей</th>
@@ -15,7 +15,6 @@
                         <th class="text-right" data-sort-ignore="true">Действие</th>
                     </tr>
                     </thead>
-
                     <tbody>
                     @forelse($users as $user)
                         <tr>
@@ -27,7 +26,6 @@
                                     <input type="hidden" name="_method" value="DELETE">
                                     {{ csrf_field() }}
                                     <button type="submit" class="btn btn-danger">Удалить</button>
-
                                 </form>
                             </td>
                         </tr>
@@ -37,8 +35,6 @@
                 </table>
                 </div>
             </div>
-
-
         </div>
     </div>
 @endsection

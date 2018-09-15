@@ -1,16 +1,10 @@
 @extends('layouts.app')
-
 @section('content')
-
-
-
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="container-fluid">
-                <div class="panel panel-default">
-                    <table id="projects" class="wrap table table-bordered table-hover">
-                        <thead>
+    <div class="col-md-12">
+        <div class="container-fluid">
+            <div class="panel panel-default table-responsive">
+                <table class="wrap table table-bordered table-hover">
+                    <thead>
                         <tr>
                             <th rowspan="2">DU ID</th>
                             <th rowspan="2">ПОДРЯДЧИК</th>
@@ -189,7 +183,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
 @endsection
 

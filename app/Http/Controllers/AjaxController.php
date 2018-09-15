@@ -12,16 +12,18 @@ use Illuminate\Support\Facades\Auth;
 
 class AjaxController extends Controller
 {
-    public function updateProjectValue(Request $request)
-    {
-        $data = $request->all();
-        var_dump($data);
-    }
 
-    public function update(Request $request, Project $project)
-    {
-        $project->update($request->all());
 
-        return redirect('project');
+    public function updateField(Request $request)
+    {
+        $id = $request->project_id;
+        $field_name = $request->field_name;
+        $value = $request->value;
+
+        $project = Project::find($id);
+
+        $project->update([
+            $field_name => $value,
+        ]);
     }
 }

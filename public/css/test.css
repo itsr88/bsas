@@ -1,33 +1,33 @@
-/*table {*/
-/*width: 2000px;*/
-/*}*/
 
-table {
-    display: block;
-    overflow: auto;
-    overflow-y: auto;
-    max-width: 100%;
-    max-height: 850px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
 thead  {
-    position: sticky;
     top: 0;
     background: #afd9ee;
 }
 
+th {
+    text-align: center;
+}
+
 body {
-    font-family: Raleway,sans-serif;
+    font-family: Arial,sans-serif;
     font-size: 14px;
     line-height: 1.6;
     color: #2f373c;
     background-color: #f5f8fa;
 }
 
-/*.edit input {*/
-    /*display: none;*/
-/*}*/
+
+
+
+table {
+     max-height: 85vh;
+        overflow-y: auto;
+        display: block;
+    font-size: 13px;
+    line-height: 1.4;
+    min-width: 100%;
+    }
+
+.table-bordered, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid rgba(43, 43, 43, 0.92);
+}

@@ -28,4 +28,5 @@ Route::get('home/', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 
 
-Route::post('/project/ajaxupdate/', 'ProjectController@ajaxupdate')->name('ajaxupdate');
+
+Route::post('/project/ajaxupdate/', 'AjaxController@updateField')->name('ajaxupdate');

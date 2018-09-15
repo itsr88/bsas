@@ -58,8 +58,8 @@ class ProjectController extends Controller
     {
         Project::create([
             'user_id' => Auth::user()->id,
-            'du_id' => $request->du_id,
-            'podriadchik' => $request->podriadchik,
+            'du_id' => trim($request->du_id),
+            'podriadchik' => trim($request->podriadchik),
             'du_name_v_zakaze' => $request->du_name_v_zakaze,
             'city' => $request->city,
             'year' => $request->year,
@@ -114,27 +114,11 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-
-
         $project->update($request->all());
 
         return redirect('project');
     }
 
-
-
-    public function ajaxupdate(Request $request)
-    {
-        $id = $request->project_id;
-        $field_name = $request->field_name;
-        $value = $request->value;
-
-        $project = Project::find($id);
-
-        $project->update([
-            $field_name => $value,
-        ]);
-    }
 
     /**
      * Remove the specified resource from storage.
