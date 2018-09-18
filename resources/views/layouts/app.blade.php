@@ -77,5 +77,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/ajaxupdatefield.js') }}"> </script>
+    <script src="{{ asset('js/jfilter.js') }}"> </script>
 </body>
 </html>
